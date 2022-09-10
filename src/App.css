@@ -1,38 +1,193 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+.container{
+background-image: url(/public/img/AdobeStock_385964221.jpeg);
+background-size: cover;
+min-height: 100vh;
+min-width:100vw;
+border: 5px solid lavender;
+}
+.header{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+.title{
+    color: white;
+    font-size: 3vw;
+    font-family: 'Courgette', cursive;
+    cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.divider{
+width: 50%;
+color: white;
+
+
+}
+.content{
+    display:flex ;
+    justify-content: space-around;
+    margin-top: 1rem;
+  
+    
+}
+.cogs{
+width: 12rem;
+margin-left: 5rem;
+}
+.quizset{
+    font-size:30px;
+    color: white;
+    padding: 5px;
+    display: flex;
+    margin-left: 8rem;
+   
+}
+.set_select{
+    background-color: white; opacity:0.87;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70%;
+    padding-bottom: 20rem;
+    padding: 20px;
+    flex: 0.8;
+    justify-content: space-evenly;
+    border: 3px solid purple;
+    border-radius: 10%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.msg{
+    background: red ;
+    color:white ;
+
+}
+ .quiz{
+    margin-top: 2rem;
+  display:flex ;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
+
+ }
+.subtitle{
+color: white;
+margin-left: 1rem;
+margin-bottom: 1rem;
+font-size: 25px;
+border: 1px solid white;
+box-shadow: 4px 4px 2px white;
+padding: 5px 10px;
+}
+
+.quizInfo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    margin: 10px;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  .question {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.singleQuestion {
+  width: 95%;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border: 5px solid grey;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.options {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px;
+}
+
+.singleOption {
+  width: 46%;
+  height: 50px;
+  padding: 15px 20px;
+  margin: 10px;
+  box-shadow: 0 0 2px black;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 60vh;
+    border: white;
+    text-align: center;
+  }
+  .score{
+    color: white;
+    background-color: black;
+margin-left: 1rem;
+margin-bottom: 1rem;
+font-size: 25px;
+border: 1px solid white;
+box-shadow: 4px 4px 2px white;
+padding: 5px 10px;
+
+  }
+  
+@media (max-width: 614px) {
+  .singleOption {
+    width: 100%;
+  }
+}
+
+.controls {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.select {
+  background-color: rgb(7, 207, 0);
   color: white;
+  box-shadow: 0 0 1px black;
 }
 
-.App-link {
-  color: #61dafb;
+.wrong {
+  background-color: rgb(233, 0, 0);
+  color: white;
+  box-shadow: 0 0 1px black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media(max-width:800px){
+    .container{
+     background-size:50rem 60rem;
+    }
+    .title{
+        font-size: 9vw;
+        margin-bottom: 1rem;
+    }
+    .content{
+        margin-top: 2rem;
+    }
+    .set_select{
+        margin-top:2rem;
+        padding: 5px;
+    
+    }
 }
+
+
