@@ -1,7 +1,6 @@
 import { Button, MenuItem, TextField } from '@mui/material'
 import {useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import Errorespon from '../components/Errorespon';
 import Categories from '../components/Categories'
 
 const Home = ({name,setName,fetchQuestions}) => {

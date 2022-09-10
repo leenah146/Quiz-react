@@ -7,11 +7,11 @@ import Questions from '../components/Questions';
 const Quiz = ({name,score,questions,setQuestions,setScore}) => {
  const [options,setOptions] = useState('');
  const [currQuest,setCurrQuest] = useState (0);
- const [loading,setLoading] = useState(false)
-const navigate=useNavigate();
- 
+
+   const navigate=useNavigate();
  useEffect(() => {
-  if (questions==''){
+
+  if (questions===''){
      setTimeout(() => {
       navigate('/')
     }, 1000);

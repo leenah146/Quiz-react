@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import Errorespon from './Errorespon';
+import Errorrespon from './Errorrespon';
 import { Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 const Questions = ({  currQues,
@@ -35,7 +35,7 @@ const Questions = ({  currQues,
       } else if (selected) {
         setCurrQues(currQues + 1);
         setSelected();
-      } else setError("Please select an option first");
+      } else setError("You forgot to select!");
     };
   
     const handleQuit = () => {
@@ -49,7 +49,7 @@ const Questions = ({  currQues,
     <div className="singleQuestion">
         <h2 style={{color:'white'}}>{questions[currQues].question}</h2>
         <div className='options'>
-          {error&&<Errorespon>{error}</Errorespon>}
+          {error&&<Errorrespon>{error}</Errorrespon>}
           {options&& options.map((i) => <button
           onClick={() => handleCheck(i)} className={`singleOption ${selected && handleSelect(i)}`} key={i} disabled={selected}>{i}</button>)}
         </div>
