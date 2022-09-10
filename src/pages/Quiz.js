@@ -25,7 +25,7 @@ const Quiz = ({name,score,questions,setQuestions,setScore}) => {
       ])
   );
 }
-}, [currQuest, questions]);
+}, [currQuest, questions,navigate]);
 
 console.log(questions);
 
